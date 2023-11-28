@@ -28,16 +28,17 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
-//        val navController = findNavController(R.id.nav_host_fragment_content_main)
-//        appBarConfiguration = AppBarConfiguration(navController.graph)
-//        setupActionBarWithNavController(navController, appBarConfiguration)
+        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        appBarConfiguration = AppBarConfiguration(navController.graph)
+        setupActionBarWithNavController(navController, appBarConfiguration)
 
-        binding.tvCounter.text = viewModel.counter.toString()
+//        viewModel.counter.observe(this) {counter ->
+//            //o que fazer se o valor for mudado
+//            binding.tvCounter.text = counter.toString()
+//        }
 
         binding.fab.setOnClickListener { view ->
-            viewModel.increment()
-            //pegar o novo valor e atribuir pra view
-            binding.tvCounter.text = viewModel.counter.toString()
+//            viewModel.increment()
         }
     }
 
