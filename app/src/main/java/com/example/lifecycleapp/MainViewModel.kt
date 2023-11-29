@@ -1,6 +1,7 @@
 package com.example.lifecycleapp
 
 import android.util.Log
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -14,11 +15,12 @@ class MainViewModel : ViewModel() {
     val counter: LiveData<Int> = _counter
     //leitura pública, atribuição privada
 
+    var incrementBy = 1
 
     fun increment() {
         //pode ser nulo
         val number = _counter.value ?: 0
-        _counter.value = number + 1
+        _counter.value = number + incrementBy
     }
 }
 

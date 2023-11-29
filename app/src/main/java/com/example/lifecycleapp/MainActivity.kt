@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
+    //como está dentro da activity, não precisa colocar o prefixo
     //passando no generics o nome da viewmodel q voce quer recuperar
     private val viewModel by viewModels<MainViewModel>()
 
@@ -38,7 +39,8 @@ class MainActivity : AppCompatActivity() {
 //        }
 
         binding.fab.setOnClickListener { view ->
-//            viewModel.increment()
+         viewModel.increment()
+
         }
     }
 

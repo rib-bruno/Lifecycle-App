@@ -44,4 +44,6 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
     <string name="incrementar">Incrementar</string>
+    <string name="hello_first">Hello first fragment!</string>
+    <string name="increment_by">Incrementar por</string>
 </resources>
