@@ -1,4 +1,4 @@
-package com.example.lifecycleapp.viewmodel
+package com.example.lifecycleapp
 
 import android.app.Activity
 import android.os.Bundle

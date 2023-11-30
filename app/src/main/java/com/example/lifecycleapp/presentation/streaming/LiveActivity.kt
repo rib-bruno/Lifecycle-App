@@ -1,4 +1,4 @@
-package com.example.lifecycleapp.streaming
+package com.example.lifecycleapp.presentation.streaming
 
 import android.os.Bundle
 import android.os.PersistableBundle

@@ -1,4 +1,4 @@
-package com.example.lifecycleapp.streaming
+package com.example.lifecycleapp.presentation.streaming
 
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner

@@ -1,4 +1,4 @@
-package com.example.lifecycleapp
+package com.example.lifecycleapp.presentation.counter
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.example.lifecycleapp.R
 import com.example.lifecycleapp.databinding.FragmentFirstBinding
+import com.example.lifecycleapp.presentation.ViewModelFactory
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -21,7 +23,9 @@ class FirstFragment : Fragment() {
     private val binding get() = _binding!!
 
     //delegate para reutilizar viewmodel - pega nossa activity como lifecycleowner
-    private val viewModel by activityViewModels<MainViewModel>()
+    private val viewModel by activityViewModels<MainViewModel>{
+        ViewModelFactory()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

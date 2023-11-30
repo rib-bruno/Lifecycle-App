@@ -1,16 +1,15 @@
 package com.example.lifecycleapp
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
 import androidx.activity.viewModels
 import com.example.lifecycleapp.databinding.ActivityMainBinding
+import com.example.lifecycleapp.presentation.ViewModelFactory
+import com.example.lifecycleapp.presentation.counter.MainViewModel
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,7 +18,9 @@ class MainActivity : AppCompatActivity() {
 
     //como está dentro da activity, não precisa colocar o prefixo
     //passando no generics o nome da viewmodel q voce quer recuperar
-    private val viewModel by viewModels<MainViewModel>()
+    private val viewModel by viewModels<MainViewModel> {
+        ViewModelFactory()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
